@@ -1,0 +1,38 @@
+Bước 1: Thu thập yêu cầu
+Gặp gỡ và thu thập yêu cầu từ khách hàng: Hiểu rõ về tính năng, giao diện, và yêu cầu kỹ thuật cụ thể.
+
+Tạo tài liệu yêu cầu: Ghi chép chi tiết về các chức năng, giao diện, và các API cần thiết.
+
+Bước 2: Thiết kế
+Thiết kế cơ sở dữ liệu: Xác định các thực thể như địa điểm du lịch, người dùng, đánh giá, v.v.
+
+Thiết kế giao diện người dùng: Vẽ wireframe, thiết kế trang web để hiển thị thông tin du lịch.
+
+Bước 3: Phát triển backend với Java Spring Boot
+Tạo dự án Spring Boot: Sử dụng Spring Initializr để khởi tạo dự án Spring Boot với các dependency cần thiết.
+
+Xây dựng cơ sở dữ liệu: Tạo các entity, repository và service để tương tác với cơ sở dữ liệu (địa điểm du lịch, người dùng, đánh giá, v.v.).
+
+Phát triển RESTful APIs: Xây dựng các API để cung cấp thông tin về địa điểm du lịch, đánh giá, thông tin người dùng, v.v.
+
+Bước 4: Phát triển frontend với Vue.js
+Cài đặt Vue CLI và tạo dự án Vue.js: Tạo cấu trúc dự án Vue.js để phát triển giao diện người dùng.
+
+Phát triển các component: Xây dựng các component Vue.js để hiển thị thông tin về địa điểm du lịch, form đăng nhập, trang chủ, v.v.
+
+Kết nối với APIs: Sử dụng Axios hoặc Fetch để gửi các yêu cầu đến backend và nhận dữ liệu về.
+
+Bước 5: Tích hợp frontend và backend
+Cấu hình CORS và kết nối APIs: Đảm bảo rằng Vue.js có thể giao tiếp với backend Spring Boot thông qua các APIs đã được xây dựng.
+
+Tích hợp giao diện và dữ liệu: Hiển thị thông tin du lịch từ backend lên giao diện người dùng.
+
+Bước 6: Kiểm thử
+Kiểm thử đơn vị và tích hợp: Viết các test case để kiểm tra từng phần code, cũng như kiểm tra tích hợp giữa frontend và backend.
+
+Kiểm thử hệ thống: Kiểm tra toàn bộ hệ thống trước khi triển khai để đảm bảo hoạt động mượt mà và không có lỗi.
+
+Bước 7: Triển khai và duy trì
+Triển khai ứng dụng: Đưa ứng dụng lên môi trường sản phẩm để người dùng trải nghiệm.
+
+Quản lý và duy trì: Theo dõi, bảo trì và cải thiện hiệu suất của ứng dụng, đồng thời cập nhật các tính năng mới theo yêu cầu từ khách hàng.
