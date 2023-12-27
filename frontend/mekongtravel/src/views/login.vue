@@ -90,6 +90,7 @@
                 <div class="md:block hidden w-1/2">
                     <img class="rounded-2xl max-h-[1600px]" src="../assets/img/background_login.png"
                         alt="login form image" />
+                        <p class="text-gray-400 mt-2 absolute mr-4 mb-4">© 2024 MekongTravel. All Rights Reserved</p>
                 </div>
             </div>
         </section>
