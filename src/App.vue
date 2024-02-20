@@ -1,19 +1,23 @@
 <template>
   <div>
-    <nav-bar></nav-bar>
-    <home-page></home-page>
-    <router-view></router-view>
+    <NavBar />
+    <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
-import HomePage from "./views/HomePage.vue";
+import Footer from "./components/Footer.vue";
 export default {
+  props: {},
+  data() {
+    return {};
+  },
   name: "App",
   components: {
     NavBar,
-    HomePage,
+    Footer,
   },
 };
 </script>

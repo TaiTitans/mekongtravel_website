@@ -10,12 +10,12 @@
 }
 </style>
 <template>
-  <body class="body_register">
+  <body class="body_register max-w-full">
     <section
       class="bg-gray-100 h-full flex box-border justify-center items-center"
     >
       <div
-        class="bg-white shadow-xl rounded-2xl flex w-9/12 p-5 items-center form_register"
+        class="bg-white shadow-xl rounded-2xl flex w-9/12 p-5 items-center form_register mt-2"
       >
         <div class="md:w-1/2 px-8">
           <h2 class="font-bold text-3xl text-[#002D74]">Đăng ký</h2>

@@ -11,12 +11,12 @@
 }
 </style>
 <template>
-  <body class="body_login">
+  <body class="body_login max-w-full">
     <section
       class="bg-gray-100 h-full flex box-border justify-center items-center"
     >
       <div
-        class="bg-white shadow-xl rounded-2xl flex w-9/12 p-5 items-center form_login"
+        class="bg-white shadow-xl rounded-2xl flex w-9/12 p-5 items-center form_login mt-2"
       >
         <div class="md:w-1/2 px-8">
           <h2 class="font-bold text-3xl text-[#002D74]">Đăng nhập</h2>
