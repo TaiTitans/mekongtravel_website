@@ -2,7 +2,7 @@
 <!-- eslint-disable prettier/prettier -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="footer mt-2">
+  <div class="footer mt-2 z-10">
     <div class="bg-gray-300">
       <div
         class="max-w-full px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto"
@@ -12,35 +12,35 @@
         </div>
         <div class="p-5">
           <div class="text-sm uppercase text-cyan-600 font-bold">
-            Resources
+            Tài nguyên
           </div>
           <a class="my-3 block text-slate-700 hover:text-white" href="/#"
-            >Documentation <span class="text-teal-600 text-xs p-1"></span></a
+            >Tài liệu <span class="text-teal-600 text-xs p-1"></span></a
           ><a class="my-3 block text-slate-700 hover:text-white" href="/#"
-            >Tutorials <span class="text-teal-600 text-xs p-1"></span></a
+            >Hướng dẫn <span class="text-teal-600 text-xs p-1"></span></a
           ><a class="my-3 block text-slate-700 hover:text-white" href="/#"
-            >Support <span class="text-teal-600 text-xs p-1">New</span></a
+            >Hỗ trợ <span class="text-teal-600 text-xs p-1">New</span></a
           >
         </div>
         <div class="p-5">
-          <div class="text-sm uppercase text-cyan-600 font-bold">Support</div>
+          <div class="text-sm uppercase text-cyan-600 font-bold">Hỗ trợ</div>
           <a class="my-3 block text-slate-700 hover:text-white" href="/#"
-            >Help Center <span class="text-teal-600 text-xs p-1"></span></a
+            >Trung tâm hỗ trợ <span class="text-teal-600 text-xs p-1"></span></a
           ><a class="my-3 block text-slate-700 hover:text-white" href="/#"
-            >Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a
+            >Điều khoản <span class="text-teal-600 text-xs p-1"></span></a
           ><a class="my-3 block text-slate-700 hover:text-white" href="/#"
-            >Conditions <span class="text-teal-600 text-xs p-1"></span
+            >Điều kiện <span class="text-teal-600 text-xs p-1"></span
           ></a>
         </div>
         <div class="p-5">
           <div class="text-sm uppercase text-cyan-600 font-bold">
-            Contact us
+            Liên hệ
           </div>
           <a class="my-3 block text-sky-950 underline" href="/#"
-            >XXX XXXX, Floor 4 San Francisco, CA
+            >Trường Đại học Cần Thơ, Đường 3/2, Ninh Kiều, Cần Thơ
             <span class="text-teal-600 text-xs p-1"></span></a
           ><a class="my-3 block text-sky-950 underline" href="/#"
-            >contact@company.com <span class="text-teal-600 text-xs p-1"></span
+            >contact@mekongtravel.com <span class="text-teal-600 text-xs p-1"></span
           ></a>
         </div>
       </div>
