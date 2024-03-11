@@ -515,6 +515,114 @@
         </div>
       </div>
 
+
+      <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+        <div class="flex-shrink-0">
+          <img class="h-48 w-full object-cover" src="../assets/img/locationspage/chuadoi.jpg" alt="">
+        </div>
+        <div class="flex flex-1 flex-col justify-between bg-white p-6">
+          <div class="flex-1">
+            <p class="text-sm font-medium text-indigo-600">
+              <a href="#" class="hover:underline">Phong cảnh</a>
+            </p>
+            <a href="#" class="mt-2 block">
+              <p class="text-xl font-semibold text-gray-900">Lạc vào chốn thanh bình ở Chùa Dơi</p>
+              <p class="mt-3 text-base text-gray-500">Chùa Dơi thu hút không chỉ bởi kiến trúc độc đáo mà còn bởi việc tôn vinh và bảo tồn những con dơi, được coi là linh vật của vùng đất này. Các tượng dơi nằm trải rộng trong khuôn viên chùa, tạo nên một không gian tâm linh và bí ẩn.</p>
+            </a>
+          </div>
+          <div class="mt-6 flex items-center">
+            <div class="flex-shrink-0">
+              <a href="#">
+                <span class="sr-only">Daniela Metz</span>
+                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+              </a>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline">Daniela Metz</a>
+              </p>
+              <div class="flex space-x-1 text-sm text-gray-500">
+                <time datetime="2020-02-12">Feb 12, 2023</time>
+                <span aria-hidden="true">·</span>
+                <span>11 min read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+        <div class="flex-shrink-0">
+          <img class="h-48 w-full object-cover" src="../assets/img/locationspage/chuachenkieu.jpg" alt="">
+        </div>
+        <div class="flex flex-1 flex-col justify-between bg-white p-6">
+          <div class="flex-1">
+            <p class="text-sm font-medium text-indigo-600">
+              <a href="#" class="hover:underline">Phong cảnh</a>
+            </p>
+            <a href="#" class="mt-2 block">
+              <p class="text-xl font-semibold text-gray-900">Lần đầu tham quan Chùa Chén Kiểu</p>
+              <p class="mt-3 text-base text-gray-500">Nét nổi bậc đặc trưng của ngôi chùa này là ở những bức tường. Không phải được tô xi măng thẳng đều, hay lát gạch bông hay sơn màu như những ngôi chùa khác. Tường của ngôi chùa này được ốp bởi những mảnh chén, dĩa, sành sứ nhìn rất độc đáo nhưng vô cùng thẩm mỹ đẹp lạ.</p>
+            </a>
+          </div>
+          <div class="mt-6 flex items-center">
+            <div class="flex-shrink-0">
+              <a href="#">
+                <span class="sr-only">Daniela Metz</span>
+                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+              </a>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline">Daniela Metz</a>
+              </p>
+              <div class="flex space-x-1 text-sm text-gray-500">
+                <time datetime="2020-02-12">Feb 12, 2023</time>
+                <span aria-hidden="true">·</span>
+                <span>11 min read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+        <div class="flex-shrink-0">
+          <img class="h-48 w-full object-cover" src="../assets/img/locationspage/vinhlong.jpg" alt="">
+        </div>
+        <div class="flex flex-1 flex-col justify-between bg-white p-6">
+          <div class="flex-1">
+            <p class="text-sm font-medium text-indigo-600">
+              <a href="#" class="hover:underline">Phong cảnh</a>
+            </p>
+            <a href="#" class="mt-2 block">
+              <p class="text-xl font-semibold text-gray-900">Vĩnh Long và khu du lịch tựa như xứ hoa anh đào</p>
+              <p class="mt-3 text-base text-gray-500">Vĩnh Long, một thành phố ven sông thuộc vùng Đồng Bằng Sông Cửu Long, không chỉ là nơi giữ gìn bản sắc văn hóa miền Tây mà còn là điểm đến thu hút du khách bởi những khu du lịch độc đáo.</p>
+            </a>
+          </div>
+          <div class="mt-6 flex items-center">
+            <div class="flex-shrink-0">
+              <a href="#">
+                <span class="sr-only">Daniela Metz</span>
+                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+              </a>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline">Daniela Metz</a>
+              </p>
+              <div class="flex space-x-1 text-sm text-gray-500">
+                <time datetime="2020-02-12">Feb 12, 2023</time>
+                <span aria-hidden="true">·</span>
+                <span>11 min read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>
