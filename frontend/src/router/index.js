@@ -4,6 +4,7 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import LocationsPage from "../views/LocationsPage.vue";
 import FoodsPage from "@/views/FoodsPage.vue";
+import HistoryPage from "@/views/HistoryPage.vue";
 const routes = [
   {
     path: "/",
@@ -24,6 +25,10 @@ const routes = [
   {
     path: "/foods",
     component: FoodsPage,
+  },
+  {
+    path: "/history",
+    component: HistoryPage,
   },
 ];
 
