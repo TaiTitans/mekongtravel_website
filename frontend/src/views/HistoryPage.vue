@@ -1,49 +1,30 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
   <div>
-    <div class="flex h-screen items-center justify-center bg-[#554f3d] p-5 shadow-md rounded-md">
-      <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-10 md:px-10">
-        <div>
-          <h1 class="mb-2 text-3xl font-bold text-white">
-            <span class="text-green-500">Lịch sử,</span> Đồng bằng sông Cửu Long
-          </h1>
-          <p class="mb-6 text-white">
-            Khám phá đôi nét về lịch sử và tổng quan của Miền Tây - Việt Nam,
-            chúng tôi sẽ mang đến cho bạn đôi nét về thông tin cơ bản của một số
-            nét truyền thống của Đồng bằng sông Cửu Long.
-          </p>
-          <div class="flex justify-center space-x-5">
-            <button
-              class="flex w-full items-center justify-center gap-1 rounded-2xl bg-[#0891b2] p-5 py-3 font-semibold text-white hover:bg-white hover:text-black"
-            >
-              Khám phá
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="h-6 w-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                />
-              </svg>
-            </button>
-          </div>
+    <div class="bg-gray-900 py-20">
+    <div class="container mx-auto px-6 md:px-12">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 lg:w-2/3">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl text-white font-bold mb-6">
+                    Tổng quan lịch sử <br class="hidden md:block" />
+                    <span class="text-yellow-500">Cửu Long</span> Việt Nam
+                </h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-400 mb-8">
+                    Chúng tôi cung cấp thông tin cơ bản thú vị dành cho bạn.
+                </p>
+                <div class="flex gap-2">
+                    <a href="#1" class="bg-[#0891b2] hover:bg-white hover:text-black text-white font-bold py-3 px-6 rounded-md">
+                        Bắt đầu
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 lg:w-1/3 mt-8 md:mt-0">
+                <img src="../assets/img/historypage/header_img.png" alt="Hero Image" class="rounded-lg shadow-lg" />
+            </div>
         </div>
-        <div>
-          <img
-            src="../assets/img/historypage/header_img.png"
-            alt=""
-            class="md:size-96 size-72 rounded-full"
-          />
-        </div>
-      </div>
     </div>
-    <div class="flex mt-4">
+</div>
+    <div class="flex mt-4" id="1">
         
         <div class="text-[34px] text-[#554f3d] ml-4 font-mono font-bold">GỐM SỨ</div>
         <div class="h-[1px] ml-4 bg-slate-400 w-[900px] mt-8"></div>
@@ -110,6 +91,117 @@
         <div class="text-[34px] text-[#554f3d] ml-4 font-mono font-bold">ĐỒ THỦ CÔNG MỸ NGHỆ</div>
         <div class="h-[1px] ml-4 bg-slate-400 w-[900px] mt-8"></div>
     </div>
+   
+
+    <div class="relative overflow-hidden bg-white">
+    <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
+      <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+        <div class="sm:max-w-lg">
+          <h1 class="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Những bàn tay tinh tế</h1>
+          <p class="mt-4 text-xl text-gray-500">Nghề làm đồ thủ công mỹ nghệ không chỉ là sự kỹ thuật cao cấp mà còn là cả một quá trình truyền thống và tinh hoa văn hóa, nơi mà bàn tay tài ba của người thợ làm nên những kiệt tác đẹp mắt, phản ánh sự sáng tạo và tâm hồn của dân tộc.
+</p>
+        </div>
+        <div>
+          <div class="mt-10">
+            <!-- Decorative image grid -->
+            <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+              <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                <div class="flex items-center space-x-6 lg:space-x-8">
+                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                      <img src="../assets/img/historypage/tcmn1.jpg" class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="../assets/img/historypage/tcmn2.jpg" alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                  </div>
+                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="../assets/img/historypage/tcmn3.jpg" alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="../assets/img/historypage/tcmn4.jpeg" alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="../assets/img/historypage/tcmn5.jpg" alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                  </div>
+                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="../assets/img/historypage/tcmn6.jpg" alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="../assets/img/historypage/tcmn7.jpg" alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="flex justify-end mt-8">
+        
+      <div class="h-[1px] ml-4 bg-slate-400 w-[900px] mt-8"></div>
+        <div class="text-[34px] text-[#554f3d] ml-4 font-mono font-bold">BÁNH DÂN GIAN</div>
+    </div>
+
+    <section class="w-full mx-auto py-10 bg-gray-50 dark:bg-gray-900 dark:text-white mt-8">
+
+    <div class="xl:w-[80%] sm:w-[85%] xs:w-[90%] mx-auto flex md:flex-row xs:flex-col lg:gap-4 xs:gap-2 justify-center lg:items-stretch md:items-center mt-4">
+      <div class="lg:w-[50%] xs:w-full">
+        <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm" src="../assets/img/historypage/banhtet.png" alt="banhtet" />
+      </div>
+      <div class="lg:w-[50%] sm:w-full xs:w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 xs:p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-[#554f3d] dark:text-white">Truyền thống làm bánh Tét</h2>
+        <p class="text-md mt-4">Bánh tét ở Miền Tây không chỉ là một món ăn truyền thống, mà còn là biểu tượng của sự ấm cúng, hòa nhã và đậm chất miền quê, tạo nên một phần không thể thiếu trong bữa cỗ Tết của người dân miền Tây.</p>
+      </div>
+    </div>
+    <!-- col-2 -->
+    <div class="xl:w-[80%] sm:w-[85%] xs:w-[90%] mx-auto flex md:flex-row xs:flex-col lg:gap-4 xs:gap-2 justify-center lg:items-stretch md:items-center mt-6">
+      <!--  -->
+      <div class="md:hidden sm:block xs:block xs:w-full">
+        <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm" src="../assets/img/historypage/banhtrang.jpg" alt="banhtrang" />
+      </div>
+      <!--  -->
+      <div class="lg:w-[50%] xs:w-full bg-gray-100 dark:bg-gray-900 dark:text-gray-400 md:p-4 xs:p-0 rounded-md">
+        <h2 class="text-3xl font-semibold text-[#554f3d] dark:text-white">Truyền thống làm bánh tráng</h2>
+
+        <p class="text-md mt-4">Ở miền Tây Việt Nam, bánh tráng không chỉ là một loại đặc sản ngon mà còn là một phần không thể thiếu trong bữa ăn hàng ngày và các dịp lễ tết. Truyền thống làm bánh tráng ở đây đã được bảo tồn và phát triển qua nhiều thế hệ.</p>
+      </div>
+      <!--  -->
+      <div class="md:block sm:hidden xs:hidden lg:w-[50%] xs:w-full">
+        <img class="lg:rounded-t-lg xs:rounded-sm" src="../assets/img/historypage/banhtrang.jpg" alt="billboard image" />
+      </div>
+    </div>
+  </section>
+
+  <div class="flex mt-8">
+        
+        <div class="text-[34px] text-[#554f3d] ml-4 font-mono font-bold">CON NGƯỜI</div>
+        <div class="h-[1px] ml-4 bg-slate-400 w-[900px] mt-8"></div>
+    </div>
+
+    <div class="p-4 mt-2">
+  <figure class="md:flex max-w-8xl h-[300px] bg-[#554f3d] rounded-md p-8 md:p-0 dark:bg-slate-800">
+    <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto object-cover" src="../assets/img/historypage/connguoi.png" alt="" width="384" height="512">
+    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+      <blockquote>
+        <p class="text-lg font-medium text-white dark:text-slate-100">
+         
+Con người miền Tây Việt Nam được biết đến là những người hiền lành, hòa nhã và hướng nội. Với tinh thần mở cửa đón khách, họ luôn nồng hậu và chân thành trong giao tiếp và đối đãi với mọi người.
+
+Cuộc sống ở miền Tây mang đậm bản sắc văn hóa dân gian, với những truyền thống và phong tục được bảo tồn và phát triển qua nhiều thế hệ. Con người miền Tây sống gần gũi với thiên nhiên và thuần thục trong việc sử dụng những nguồn tài nguyên tự nhiên như sông nước, đồng ruộng và rừng tràm.
+        </p>
+      </blockquote>
+    </div>
+  </figure>
+</div>
+
 
   </div>
 </template>
