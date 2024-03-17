@@ -5,6 +5,7 @@ import Register from "../views/Register.vue";
 import LocationsPage from "../views/LocationsPage.vue";
 import FoodsPage from "@/views/FoodsPage.vue";
 import HistoryPage from "@/views/HistoryPage.vue";
+import ContactPage from "@/views/ContactPage.vue";
 const routes = [
   {
     path: "/",
@@ -29,6 +30,10 @@ const routes = [
   {
     path: "/history",
     component: HistoryPage,
+  },
+  {
+    path: "/contact",
+    component: ContactPage,
   },
 ];
 
