@@ -99,12 +99,12 @@
             <p
               class="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200"
             >
-            Góp ý kiến của bạn
+              Góp ý kiến của bạn
             </p>
             <h2
               class="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl mt-2"
             >
-            Liên Hệ
+              Liên Hệ
             </h2>
             <p
               class="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400"
@@ -116,8 +116,11 @@
         <div class="flex items-stretch justify-center">
           <div class="grid md:grid-cols-2">
             <div class="h-full pr-6">
-              <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400 font-monok">
-                Chúng tôi luôn sẵn lòng lắng nghe ý kiến và yêu cầu của bạn để cải thiện và phục vụ khách hàng tốt hơn. Cảm ơn bạn rất nhiều.
+              <p
+                class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400 font-monok"
+              >
+                Chúng tôi luôn sẵn lòng lắng nghe ý kiến và yêu cầu của bạn để
+                cải thiện và phục vụ khách hàng tốt hơn. Cảm ơn bạn rất nhiều.
               </p>
               <ul class="mb-6 md:mb-0">
                 <li class="flex">
@@ -149,11 +152,9 @@
                       Địa chỉ
                     </h3>
                     <p class="text-gray-600 dark:text-slate-400">
-                        Trường Đại học Cần Thơ, Đường 3/2, Ninh Kiều, Cần Thơ
+                      Trường Đại học Cần Thơ, Đường 3/2, Ninh Kiều, Cần Thơ
                     </p>
-                    <p class="text-gray-600 dark:text-slate-400">
-                     Vietnam
-                    </p>
+                    <p class="text-gray-600 dark:text-slate-400">Vietnam</p>
                   </div>
                 </li>
                 <li class="flex">
