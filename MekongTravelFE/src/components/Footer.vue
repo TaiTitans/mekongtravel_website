@@ -2,8 +2,8 @@
 <!-- eslint-disable prettier/prettier -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="footer mt-2 z-10">
-    <div class="bg-gray-300">
+  <div class="footer mt-2 z-10 shadow-lg">
+    <div class="bg-white">
       <div
         class="max-w-full px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto"
       >

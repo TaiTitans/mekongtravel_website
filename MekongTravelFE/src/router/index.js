@@ -6,6 +6,7 @@ import LocationsPage from "../views/LocationsPage.vue";
 import FoodsPage from "@/views/FoodsPage.vue";
 import HistoryPage from "@/views/HistoryPage.vue";
 import ContactPage from "@/views/ContactPage.vue";
+import LocationsProduct from "@/views/LocationsProduct.vue";
 const routes = [
   {
     path: "/",
@@ -34,6 +35,10 @@ const routes = [
   {
     path: "/contact",
     component: ContactPage,
+  },
+  {
+    path: "/location-product",
+    component: LocationsProduct,
   },
 ];
 

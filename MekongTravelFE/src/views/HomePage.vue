@@ -20,7 +20,7 @@
             class="w-full h-full max-w-sm mx-auto lg:mx-0 opacity-30 blur-lg bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600">
         </div>
     </div>
-    <a href="#" title=""
+    <a href="#1" title=""
         class="relative z-10 inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-cyan-500 border-2 border-transparent sm:w-auto rounded-xl font-pj hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
         role="button">
         Khám phá thôi !
@@ -100,7 +100,10 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-row gap-6 items-start justify-between mt-20 ml-10 mr-6" style="inset: 0">
+
+
+  <!-- Về chúng tôi -->
+  <div class="flex flex-row gap-6 items-start justify-between mt-20 ml-10 mr-6" id="1" style="inset: 0">
 
     <div
       class="flex flex-col gap-8 items-start justify-center"
@@ -176,11 +179,40 @@
       <div
         class="rounded pt-2 pr-4 pb-2 flex flex-row gap-1 items-center justify-center shrink-0 h-12 relative ml-0"
       >
-      <a href="#" title=""
-        class="relative z-10 inline-flex w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-cyan-500 border-2 border-transparent rounded-xl font-pj hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+      <Button onclick="my_modal_4.showModal()"
+        class="btn relative z-10 inline-flex w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-cyan-500 border-2 border-transparent rounded-xl font-pj hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
         role="button">
        Đọc thêm
-    </a>
+    </Button>
+    
+<!-- You can open the modal using ID.showModal() method -->
+<dialog id="my_modal_4" class="modal overflow-auto">
+  <div class="modal-box w-11/12 max-w-5xl">
+    <div class="flex border-b-2 ">
+      <h3 class="font-bold text-[24px] mr-2 text-cyan-500">Về chúng tôi</h3>
+      <svg class="w-6 h-6 text-red-600 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z"/>
+</svg>
+
+    </div>
+    <img src="../assets/img/homepage/MekongTravelMobile.png" alt="MobileApp" class="max-w-full mt-2 rounded-md">
+    <div class="text-gray-500 text-[14px]">11:15PM - 24/04/2024</div>
+    <div class="text-gray-500 font-mono text-[14px]">-PHAN PHAT TAI</div>
+    <div class="flex">
+      <p class="mt-4 text-[18px] font-bold mr-1 text-cyan-500">PHIÊN BẢN MỚI</p>
+      <img src="../assets/img/homepage/new.png" class="w-5 h-5 mt-2">
+    </div>
+    <div>
+MekongTravel App là người bạn đồng hành lý tưởng cho những chuyến phiêu lưu khám phá miền Tây đầy màu sắc. Với ứng dụng này, bạn có thể dễ dàng tìm kiếm thông tin về các điểm đến hấp dẫn, những trải nghiệm độc đáo và những món ngon đặc trưng của vùng đất này. Tích hợp bản đồ chi tiết và gợi ý lịch trình linh hoạt, MekongTravel App giúp bạn dễ dàng tự do khám phá và khám phá những điều mới mẻ trong mỗi chuyến đi. Đừng bỏ lỡ cơ hội trải nghiệm miền Tây độc đáo cùng MekongTravel App!</div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Đóng</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
       </div>
     </div>
     <img
@@ -641,7 +673,10 @@
     </body>
   </div>
 </template>              
-<script></script>
+<script>
+
+
+</script>
 <style scoped>
 .text1 {
   font-size: 16px;

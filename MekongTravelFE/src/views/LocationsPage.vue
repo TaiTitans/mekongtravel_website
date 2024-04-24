@@ -40,9 +40,9 @@
     </div>                                          
     </div>
     <body>
-        <section class="bg-white px-1 py-6 pt-10">
+        <section class="px-1 py-6 pt-10 bg-gray-100">
   <div class="">
-    <div class="flex justify-center">
+    <div class="flex justify-center bg-gray-100">
         <h2 class="font-black text-[#48B7D6] text-center text-[26px] mb-12">Có gì hot ?</h2>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2 text-rose-500">
   <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
@@ -50,14 +50,14 @@
 </svg>
 
     </div>
-    <div class="flex space-y-4 relative justify-center">
+    <div class="flex space-y-4 relative justify-center bg-gray-100">
 
 
-        <div class="bg-gray-200 rounded-lg text-center w-[200px] flex flex-col items-center shadow-md h-full">
+        <div class="bg-white rounded-lg text-center w-[200px] flex flex-col items-center shadow-md h-full">
         <img src="../assets/img/locationspage/leonui.jpg" alt="" class="w-[200px] h-[130px] rounded-lg">
         <p class="font-bold uppercase text-[#48B7D6] mt-2">LEO NÚI</p>
         <p class="text-l font-light italic text-gray-700">Phong cảnh đồi núi thơ mộng dành cho những người thích chinh phục.</p>
-        <div class="flex items-center justify-center space-x-2 mt-4">
+        <div class="flex items-center justify-center space-x-2 mt-4 mb-2">
           <svg class="text-yellow-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
             fill="currentColor" stroke="currentColor">
             <path
@@ -80,11 +80,11 @@
       </div>
 
 
-    <div class="bg-gray-200 rounded-lg text-center w-[200px] flex flex-col items-center shadow-md ml-4 mr-4 h-full">
+    <div class="bg-white rounded-lg text-center w-[200px] flex flex-col items-center shadow-md ml-4 mr-4 h-full">
         <img src="../assets/img/locationspage/lanbien.jpg" alt="" class="w-[200px] h-[130px] rounded-lg">
         <p class="font-bold uppercase text-[#48B7D6] mt-2">LẶN BIỂN</p>
         <p class="text-l font-light italic text-gray-700">Lặn biển ngắm san hô và sinh vật biển mang lại trải nghiệm cực kì thú vị.</p>
-        <div class="flex items-center justify-center space-x-2 mt-4">
+        <div class="flex items-center justify-center space-x-2 mt-4 mb-2">
           <svg class="text-yellow-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
             fill="currentColor" stroke="currentColor">
             <path
@@ -107,11 +107,11 @@
       </div>
 
 
-      <div class="bg-gray-200 rounded-lg text-center w-[200px] flex flex-col items-center shadow-md h-full">
+      <div class="bg-white rounded-lg text-center w-[200px] flex flex-col items-center shadow-md h-full">
         <img src="../assets/img/locationspage/baibien.jpg" alt="" class="w-[200px] h-[130px] rounded-lg">
         <p class="font-bold uppercase text-[#48B7D6] mt-2">BÃI BIỂN</p>
         <p class="text-l font-light italic text-gray-700">Những bãi biển cát trắng cùng với nước xanh cùng hòa vào những làn sóng xanh mát.</p>
-        <div class="flex items-center justify-center space-x-2 mt-4">
+        <div class="flex items-center justify-center space-x-2 mt-4 mb-2">
           <svg class="text-yellow-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
             fill="currentColor" stroke="currentColor">
             <path
@@ -136,8 +136,8 @@
     </div>
   </div>
 </section>
-<div class="text_noibat flex justify-between bg-white">
-    <div class="flex">
+<div class="text_noibat flex justify-between bg-gray-100">
+    <div class="flex bg-gray-100">
         <div class="text-[24px] font-[700] ml-4">Địa điểm nổi bật</div>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 ml-2 text-[#48B7D6D6]">
       <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
@@ -145,7 +145,7 @@
 
     </div>
 
-    <div class="flex mr-4 mt-2">
+    <!-- <div class="flex mr-4 mt-2">
         <div class="text_xt-noibat text-black underline font-medium text-[14px]">
             XEM THÊM
         </div>
@@ -155,12 +155,12 @@
 
 
 
-    </div>
+    </div> -->
 
 
 </div>
 
-<div class="bg-white">
+<div class="bg-gray-100">
     <div class="mx-auto max-w-4xl px-6 py-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div class="bg-white rounded-lg shadow-md shadow-cyan-500/50 relative">
@@ -195,7 +195,7 @@
     </div>
 </div>
 
-<div class="text_tinhthanh flex bg-white">
+<div class="text_tinhthanh flex bg-gray-100">
     <div class="flex">
         <div class="text-[24px] font-[700] ml-4">Tỉnh Thành</div>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2 mt-2 text-[#48B7D6D6]">
@@ -207,7 +207,7 @@
 </div>
 
 
-<div class="h-[373px] relative ml-[100px]">
+<div class="h-[373px] relative ml-[100px] bg-white">
     <div
       class="bg-[#ffffff] rounded-2xl p-6 flex flex-row gap-6 items-start justify-start absolute left-[597px] top-0 overflow-hidden"
     >
@@ -284,11 +284,10 @@
         >
           65
         </div>
-        <div
-          class="text-[rgba(72,183,214,0.84)] text-center font-['Inter-Medium',_sans-serif] text-xs font-medium uppercase absolute left-[292px] top-[322px]"
-        >
+        <router-link to="/location-product"
+          class="text-[rgba(72,183,214,0.84)] text-center font-['Inter-Medium',_sans-serif] text-xs font-medium uppercase absolute left-[292px] top-[322px]">
           lựa chọn
-        </div>
+        </router-link>
       </div>
     </div>
     <div
@@ -323,11 +322,11 @@
         <div
           class="flex flex-row gap-2 items-center justify-start absolute left-72 top-[calc(50%_-_-114.5px)]"
         >
-          <div
+          <router-link to="/location-product"
             class="text-[rgba(72,183,214,0.84)] text-center font-['Inter-Medium',_sans-serif] text-xs font-medium uppercase relative"
           >
             lựa chọn
-          </div>
+          </router-link>
           <svg
             class="shrink-0 w-5 h-5 relative overflow-visible"
             style=""
@@ -378,16 +377,21 @@
       </div>
     </div>
   </div>
-  <div class="flex bg-white justify-end">
-    <div class="flex">
-        <div class="text-[18px] font-[700] ml-4">Xem thêm</div>
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2 text-[#48B7D6D6]">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
-</svg>
+  <div class="flex bg-gray-100 justify-end mt-4">
+    <div class="flex mt-4 mr-4 rounded-md shadow-md">
 
+<div class="relative inline-flex group">
+    <div
+        class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
     </div>
+    <router-link to="/location-product" 
+        class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-cyan-500 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+        role="button">Xem thêm
+    </router-link>
 </div>
-<div class="flex bg-white">
+</div>
+</div>
+<div class="flex bg-gray-100">
     <div class="flex">
         <div class="text-[24px] font-[700] ml-4">Blog</div>
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2 mt-2 text-[#48B7D6D6]">
@@ -398,9 +402,9 @@
 </div>
 
 
-<div class="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
+<div class="relative bg-gray-100 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
   <div class="absolute inset-0">
-    <div class="h-1/3 bg-white sm:h-2/3"></div>
+    <div class="h-1/3 bg-gray-100 sm:h-2/3"></div>
   </div>
   <div class="relative mx-auto max-w-7xl">
     <div class="text-center">

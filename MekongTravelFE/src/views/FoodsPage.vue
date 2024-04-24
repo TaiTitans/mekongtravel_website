@@ -1,28 +1,12 @@
-<!-- eslint-disable vue/valid-template-root -->
-<!-- eslint-disable prettier/prettier -->
 <template>
   <div>
 
-    <div class="relative slide" id="foodsCarousel">
-      <div class="carousel-indicators absolute bottom-0 flex bg-yellow-100 h-24 w-full justify-center items-center">
-        <ol class="z-50 flex w-4/12 justify-center">
-          <li v-for="(img, i) in images" :key="i" class="md:w-2 md:h-2 bg-gray-300 rounded-full cursor-pointer mx-2">
-          </li>
-        </ol>
-      </div>
-      <div class="carousel-inner relative overflow-hidden w-full">
-        <div v-for="(img, i) in images" :id="`slide-${i}`" :key="i" :class="`${active === i ? 'active' : 'left-full'}`"
-          class="carousel-item inset-0 relative w-full transform transition-all duration-500 ease-in-out">
-          <img class="block w-full" :src="img" alt="First slide" />
-        </div>
-      </div>
-    </div>
-    <div class="flex mt-6 mb-4 justify-center text-[26px] font-bold text-sky-700">
+    <div class="flex mb-4 justify-center text-[26px] font-bold text-sky-700">
       Ẩm Thực
     </div>
 
     <div
-      class="relative flex flex-col items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 rounded-md shadow-xl shadow-cyan-500/50">
+      class="mt-6 relative flex flex-col items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 rounded-md shadow-xl shadow-cyan-500/50">
       <div class="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
         <div class="text-left">
           <h2
@@ -58,39 +42,78 @@
       </div>
     </div>
 
-
-    <div class="card rounded-md shadow-2xl border-1 border-solid mt-6" id="1">
-      <Splitter style="height: 1000px">
-        <SplitterPanel class="flex flex-col items-center justify-center" :size="25" :minSize="10">
-          <div>
-            <div class="flex justify-start text-[30px] font-bold text-[#36CEF9] mt-6">
-              Mục lục
-            </div>
-            <div class="mt-4 text-[20px] font-mono font-semibold">Tỉnh Thành</div>
-
-            <div class="mt-4">
-              <Button v-for="province in provinces" :key="province.code" @click="showProvince(province.code)"
-                class="w-full border-1 shadow-md pt-2 pb-2 mb-4 hover:bg-[#36cef9] hover:text-white flex justify-center">
-                <span class="text-lg font-mono">{{ province.name }}</span>
-              </Button>
-            </div>
-
-
-          </div>
-        </SplitterPanel>
-        <SplitterPanel class="flex items-center justify-center" :size="75">
-          <!-- Hiển thị nội dung của các tỉnh thành -->
-          <div v-if="activeProvince">
-            {{ getProvinceContent(activeProvince) }}
-          </div>
-          <!-- Thêm phần hiển thị nội dung cho các tỉnh khác nếu cần -->
-        </SplitterPanel>
-      </Splitter>
+<!--Am Thuc List-->
+<div class="flex flex-row justify-center mt-12 rounded-lg shadow-lg">
+    <!-- Cột bên trái - Danh sách tỉnh thành -->
+    <div class="w-1/4 px-4 border-r mt-4">
+      <h3 class="text-[22px] text-[#36cef9] font-semibold mb-4">Danh sách tỉnh thành</h3>
+      <ul>
+        <li v-for="tinhThanh in tinhThanhList" :key="tinhThanh._id">
+          <button @click="getAmThucByTinhThanh(tinhThanh._id)" class="py-2 px-4 block w-full text-left hover:bg-[#36cef9] hover:text-white">{{ tinhThanh.tenTinhThanh }}</button>
+        </li>
+      </ul>
     </div>
+
+    <!-- Cột bên phải - Danh sách ẩm thực của tỉnh thành được chọn -->
+    <div class="w-3/4 px-4 mt-4 mb-4">
+      <div>
+    <!-- Thêm ô input và nút tìm kiếm -->
+    <div class="flex justify-end my-4">
+      <input type="text" v-model="searchKeyword" placeholder="Nhập từ khóa tìm kiếm" class="px-4 py-2 border border-gray-300 rounded-md mr-2">
+      <button @click="searchAmThuc" class="px-4 py-2 bg-[#36cef9] text-white rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
+        Tìm kiếm
+      </button>
+    </div>
+
+    <!-- Danh sách ẩm thực được tìm kiếm -->
+    <div v-if="searchResults.length > 0">
+      <h3 class="text-lg font-semibold mb-4">Kết quả tìm kiếm:</h3>
+      <div v-for="amThuc in searchResults" :key="amThuc._id" class="mb-4">
+        <!-- Hiển thị thông tin ẩm thực -->
+        <div class="border border-gray-200 p-4 rounded-lg flex">
+          <img :src="amThuc.hinhAnh" alt="Ảnh món ăn" class="w-32 h-32 object-cover rounded-lg mr-4">
+          <div>
+            <h4 class="text-lg font-semibold">{{ amThuc.tenMonAn }}</h4>
+            <p class="text-gray-600">{{ amThuc.moTa }}</p>
+            <p class="mt-2 text-blue-500 font-semibold">{{ formatPrice(amThuc.soTien) }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div v-else>
+      <p v-if="searchKeyword !== ''">Không tìm thấy kết quả phù hợp.</p>
+    </div>
+  </div>
+
+
+      <h3 v-if="selectedTinhThanh" class="text-lg font-semibold mb-4">{{ selectedTinhThanh.tenTinhThanh }}</h3>
+      <div v-if="selectedTinhThanh">
+        <div v-for="amThuc in displayedAmThucList" :key="amThuc._id" class="mb-4">
+          <div class="border border-gray-200 p-4 rounded-lg flex">
+            <img :src="amThuc.hinhAnh" alt="Ảnh món ăn" class="w-32 h-32 object-cover rounded-lg mr-4">
+            <div>
+              <h4 class="text-lg font-semibold">{{ amThuc.tenMonAn }}</h4>
+              <p class="text-gray-600">{{ amThuc.moTa }}</p>
+              <p class="mt-2 text-blue-500 font-semibold">{{ formatPrice(amThuc.soTien) }}</p>
+            </div>
+          </div>
+        </div>
+        <div v-if="totalPages > 1" class="flex justify-center mt-4">
+          <button @click="changePage(page - 1)" :disabled="page === 1" class="px-4 py-2 mr-2 rounded bg-[#36cef9] text-white hover:bg-blue-600">Trang trước</button>
+          <button @click="changePage(page + 1)" :disabled="page === totalPages" class="px-4 py-2 rounded bg-[#36cef9] text-white hover:bg-blue-600">Trang sau</button>
+        </div>
+      </div>
+      <div v-else>
+        <p>Vui lòng chọn một tỉnh thành để xem danh sách ẩm thực.</p>
+      </div>
+    </div>
+  </div>
+
+
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8 mt-20">
 
 <div
-    class="relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:rounded-3xl sm:border sm:border-gray-100 sm:px-16 sm:shadow-sm mb-4">
+    class="shadow-lg relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:rounded-3xl sm:border sm:border-gray-100 sm:px-16 sm:shadow-sm mb-4">
 
     <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         Khám phá lịch sử
@@ -134,79 +157,80 @@
 </template>
 
 <script>
-import Splitter from "primevue/splitter";
-import SplitterPanel from "primevue/splitterpanel";
-import Button from "primevue/button";
+import api from '../services/api.service';
+
 export default {
-  data: () => ({
-    images: [
-      "https://r2.nucuoimekong.com/wp-content/uploads/dac-san-mien-tay.jpg",
-      "https://vemekong.com/wp-content/uploads/2021/12/can-tho-mau-than-1968-4a.jpg",
-      "https://zoomtravel.vn/upload/images/Untitled%20design%20(9)(3).png",
-    ],
-    active: 0,
-    activeProvince: "CT",
-    provinces: [
-      { code: "CT", name: "Cần Thơ", content: "Nội dung của Cần Thơ" },
-      { code: "ST", name: "Sóc Trăng", content: "Nội dung của Sóc Trăng" },
-      { code: "BL", name: "Bạc Liêu", content: "Nội dung của Bạc Liêu" },
-      { code: "VL", name: "Vĩnh Long", content: "Nội dung của Vĩnh Long" },
-      { code: "TV", name: "Trà Vinh", content: "Nội dung của Trà Vinh" },
-      { code: "TG", name: "Tiền Giang", content: "Nội dung của Tiền Giang" },
-      { code: "CM", name: "Cà Mau", content: "Nội dung của Cà Mau" },
-      { code: "DT", name: "Đồng Tháp", content: "Nội dung của Đồng Tháp" },
-      { code: "BT", name: "Bến Tre", content: "Nội dung của Bến Tre" },
-      { code: "HG", name: "Hậu Giang", content: "Nội dung của Hậu Giang" },
-      { code: "KG", name: "Kiên Giang", content: "Nội dung của Kiên Giang" },
-      { code: "LA", name: "Long An", content: "Nội dung của Long An" },
-    ],
-  }),
-  mounted() {
-    let i = 0;
-    setInterval(() => {
-      if (i > this.images.length - 1) {
-        i = 0;
-      }
-      this.active = i;
-      i++;
-    }, 2000);
+  data() {
+    return {
+      tinhThanhList: [], // Danh sách tỉnh thành
+      selectedTinhThanh: null, // Tỉnh thành được chọn
+      amThucList: [], // Danh sách ẩm thực của tỉnh thành được chọn
+      page: 1, // Trang hiện tại
+      perPage: 4,
+      searchKeyword: '', // Từ khóa tìm kiếm nhập từ người dùng
+      searchResults: []  // Số lượng ẩm thực hiển thị trên mỗi trang
+    };
   },
-  components: {
-    Splitter,
-    SplitterPanel,
-    Button,
+  computed: {
+    totalPages() {
+      return Math.ceil(this.amThucList.length / this.perPage);
+    },
+    displayedAmThucList() {
+      const startIndex = (this.page - 1) * this.perPage;
+      return this.amThucList.slice(startIndex, startIndex + this.perPage);
+    }
+  },
+  mounted() {
+    this.fetchTinhThanhList();
   },
   methods: {
-    showProvince(province) {
-      this.activeProvince = province;
+    async fetchTinhThanhList() {
+      try {
+        const response = await api.get('/api/tinhthanh/getAll');
+        this.tinhThanhList = response.data.data;
+      } catch (error) {
+        console.error('Error fetching tỉnh thành list:', error);
+      }
     },
-    getProvinceContent(provinceCode) {
-      const province = this.provinces.find((p) => p.code === provinceCode);
-      return province ? province.content : "";
+    async getAmThucByTinhThanh(tinhThanhID) {
+      try {
+        const response = await api.get(`/api/amthuc/getByTinhThanh/${tinhThanhID}`);
+        this.selectedTinhThanh = this.tinhThanhList.find(item => item._id === tinhThanhID);
+        this.amThucList = response.data.data;
+        this.page = 1; // Reset lại trang khi chuyển tỉnh thành
+      } catch (error) {
+        console.error('Error fetching ẩm thực by tỉnh thành:', error);
+      }
     },
-  },
+    changePage(newPage) {
+      this.page = newPage;
+    },
+    formatPrice(price) {
+    if (typeof price === 'number') {
+        return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
+    } else {
+        return '';
+    }
+},
+async searchAmThuc() {
+  if (!this.searchKeyword) {
+    console.error('Từ khóa tìm kiếm không hợp lệ.');
+    return;
+  }
+
+  try {
+    const response = await api.post('/api/amthuc/search', { searchKeyword: this.searchKeyword });
+    this.searchResults = response.data.data;
+  } catch (error) {
+    console.error('Lỗi khi tìm kiếm ẩm thực:', error);
+    // Có thể thêm thông báo cho người dùng ở đây nếu cần
+  }
+}
+
+  }
 };
 </script>
 
 <style>
-.left-full {
-  left: -100%;
-}
 
-.carousel-item {
-  float: left;
-  position: relative;
-  display: block;
-  width: 100%;
-  margin-right: -100%;
-  backface-visibility: hidden;
-}
-
-.carousel-item.active {
-  left: 0;
-}
-
-.carousel-inner img {
-  height: 600px;
-}
 </style>
