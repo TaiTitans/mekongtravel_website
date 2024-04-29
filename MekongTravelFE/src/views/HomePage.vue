@@ -1,6 +1,7 @@
 <!-- eslint-disable prettier/prettier -->
 <!-- eslint-disable prettier/prettier -->
 <template>
+  <NavBar></NavBar>
   <div class="homepage bg-gray-100">
     <div class="img_container_1">
       <img
@@ -672,9 +673,18 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
 
     </body>
   </div>
+  <Footer></Footer>
 </template>              
 <script>
-
+import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
+export default {
+name: "HomePage",
+components:{
+  NavBar,
+  Footer
+}
+}
 
 </script>
 <style scoped>

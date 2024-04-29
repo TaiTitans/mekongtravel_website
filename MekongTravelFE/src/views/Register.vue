@@ -5,9 +5,6 @@
   width: 100vw;
 }
 
-.form_register {
-  height: 800px;
-}
 </style>
 <template>
   <body class="body_register max-w-full">
@@ -15,7 +12,7 @@
       class="bg-gray-100 h-full flex box-border justify-center items-center"
     >
       <div
-        class="bg-white shadow-xl rounded-2xl flex w-9/12 p-5 items-center form_register mt-2"
+        class="bg-white shadow-xl rounded-2xl flex w-9/12 p-5 items-center h-screen mt-2 mb-2"
       >
         <div class="md:w-1/2 px-8">
           <h2 class="font-bold text-3xl text-[#002D74]">Đăng ký</h2>
@@ -38,7 +35,7 @@
               placeholder="Email"
               require
             />
-            <div class="relative flex items-center">
+            <!-- <div class="relative flex items-center">
               <input
                 class="p-2 rounded-xl border w-full"
                 type="text"
@@ -53,7 +50,7 @@
               >
                 Send OTP
               </button>
-            </div>
+            </div> -->
 
             <div class="relative">
               <input
@@ -96,14 +93,14 @@
                 ></path>
               </svg>
             </div>
-            <input
+            <!-- <input
               class="p-2 rounded-xl border"
               type="password"
               name="confirmPassword"
               id="confirmPassword"
               placeholder="Nhập lại mật khẩu"
               require
-            />
+            /> -->
             <button
               class="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium"
               type="submit"

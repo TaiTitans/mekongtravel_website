@@ -8,12 +8,10 @@ import HistoryPage from "@/views/HistoryPage.vue";
 import ContactPage from "@/views/ContactPage.vue";
 import LocationsProduct from "@/views/LocationsProduct.vue";
 const routes = [
-  {
-    path: "/",
-    component: HomePage,
-  },
+
   {
     path: "/login",
+    name: 'Login',
     component: Login,
   },
   {
@@ -21,30 +19,52 @@ const routes = [
     component: Register,
   },
   {
-    path: "/locations",
-    component: LocationsPage,
+    path:'',
+    name: 'Home',
+    children:[
+      {
+        path: "/locations",
+        component: LocationsPage,
+      },
+      {
+        path: "/foods",
+        component: FoodsPage,
+      },
+      {
+        path: "/history",
+        component: HistoryPage,
+      },
+      {
+        path: "/contact",
+        component: ContactPage,
+      },
+      {
+        path: "/location-product",
+        component: LocationsProduct,
+      },
+    ]
   },
-  {
-    path: "/foods",
-    component: FoodsPage,
-  },
-  {
-    path: "/history",
-    component: HistoryPage,
-  },
-  {
-    path: "/contact",
-    component: ContactPage,
-  },
-  {
-    path: "/location-product",
-    component: LocationsProduct,
-  },
+  
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = localStorage.getItem('isAuthenticated');
+  const isLoginPage = to.path === "/login";
+  const isRegisterPage = to.path === "/register";
+
+  if (!isAuthenticated && !isLoginPage && !isRegisterPage) {
+    localStorage.setItem('redirectPath', to.path);
+    console.log(isAuthenticated);
+    next('/login');
+  } else {
+    console.log(isAuthenticated);
+    next();
+  }
+});
+
 
 export default router;

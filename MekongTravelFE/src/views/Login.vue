@@ -1,22 +1,17 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <!-- eslint-disable prettier/prettier -->
 <style>
-.body_login {
-    height: 100vh;
-    width: 100vw;
-}
 
-.form_login {
-    height: 800px;
-}
+
+
 </style>
 <template>
-  <body class="body_login max-w-full">
+  <body class="h-screen max-w-full">
     <section
       class="bg-gray-100 h-full flex box-border justify-center items-center"
     >
       <div
-        class="bg-white shadow-xl rounded-2xl flex w-9/12 p-5 items-center form_login mt-2"
+        class="bg-white shadow-xl rounded-2xl flex w-9/12 p-5 items-center h-screen"
       >
         <div class="md:w-1/2 px-8">
           <h2 class="font-bold text-3xl text-[#002D74]">Đăng nhập</h2>
