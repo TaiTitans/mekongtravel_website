@@ -1,4 +1,41 @@
 <!-- eslint-disable vue/multi-word-component-names -->
+<script>
+import Notification from '@/components/Notification.vue';
+import api from '../services/api.service'
+export default {
+  components: {
+    Notification,
+  },
+  data(){
+    return{
+      username: "",
+    email: "",
+    password: "",
+    }
+  },
+  methods: {
+    async register() {
+        const formData={
+          username: this.username,
+          email: this.email,
+          password: this.password
+        }
+       api.post('/api/customer/register', formData)
+      .then(response=>{
+          this.$refs.notification.open('Đăng ký thành công!');
+        this.$router.push('/login');
+        })
+      .catch(error=>{
+          this.$refs.notification.open(error.response.data.message);
+
+        })
+
+
+
+    },
+  },
+};
+</script>
 <style>
 .body_register {
   height: 100vh;
@@ -14,17 +51,19 @@
       <div
         class="bg-white shadow-xl rounded-2xl flex w-9/12 p-5 items-center h-screen mt-2 mb-2"
       >
+      <Notification ref="notification" />
         <div class="md:w-1/2 px-8">
           <h2 class="font-bold text-3xl text-[#002D74]">Đăng ký</h2>
           <p class="text-sm mt-4 text-[#002D74] underline">
             Đăng ký để trải nghiệm trọn vẹn nhất.
           </p>
 
-          <form action="" class="flex flex-col gap-4">
+          <form @submit.prevent="register" class="flex flex-col gap-4">
             <input
               class="p-2 mt-8 rounded-xl border"
               type="username"
               name="username"
+              v-model="username"
               placeholder="Tên đăng nhập"
               require
             />
@@ -32,6 +71,7 @@
               class="p-2 rounded-xl border"
               type="email"
               name="email"
+              v-model="email"
               placeholder="Email"
               require
             />
@@ -56,6 +96,7 @@
               <input
                 class="p-2 rounded-xl border w-full"
                 type="password"
+                v-model="password"
                 name="passwordRegister"
                 id="passwordRegister"
                 placeholder="Mật khẩu"

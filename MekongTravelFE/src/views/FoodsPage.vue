@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <div>
 
     <div class="flex mb-4 justify-center text-[26px] font-bold text-sky-700">
@@ -153,12 +154,13 @@
 
 </div>
   </div>
-  
+  <Footer />
 </template>
 
 <script>
 import api from '../services/api.service';
-
+import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
 export default {
   data() {
     return {
@@ -170,6 +172,10 @@ export default {
       searchKeyword: '', // Từ khóa tìm kiếm nhập từ người dùng
       searchResults: []  // Số lượng ẩm thực hiển thị trên mỗi trang
     };
+  },
+  components:{
+    NavBar,
+    Footer
   },
   computed: {
     totalPages() {
@@ -212,20 +218,18 @@ export default {
         return '';
     }
 },
-async searchAmThuc() {
-  if (!this.searchKeyword) {
-    console.error('Từ khóa tìm kiếm không hợp lệ.');
-    return;
-  }
+searchAmThuc() {
+    if (!this.searchKeyword) {
+      console.error('Từ khóa tìm kiếm không hợp lệ.');
+      return;
+    }
 
-  try {
-    const response = await api.post('/api/amthuc/search', { searchKeyword: this.searchKeyword });
-    this.searchResults = response.data.data;
-  } catch (error) {
-    console.error('Lỗi khi tìm kiếm ẩm thực:', error);
-    // Có thể thêm thông báo cho người dùng ở đây nếu cần
+    // Chuyển đổi từ khóa tìm kiếm sang chữ thường để tìm kiếm không phân biệt hoa thường
+    const keyword = this.searchKeyword.toLowerCase();
+
+    // Lọc danh sách địa điểm theo từ khóa tìm kiếm
+    this.searchResults = this.diaDiemList.filter(diaDiem => diaDiem.tenDiaDiem.toLowerCase().includes(keyword));
   }
-}
 
   }
 };

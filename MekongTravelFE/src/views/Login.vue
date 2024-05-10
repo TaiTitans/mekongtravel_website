@@ -2,9 +2,49 @@
 <!-- eslint-disable prettier/prettier -->
 <style>
 
-
-
 </style>
+<script>
+import api from "../services/api.service";
+import router from "../router/index";
+export default {
+  data() {
+    return {
+      username: "",
+      password: "",
+      errorMessage: null,
+      successMessage: null,
+    };
+  },
+  methods: {
+ dangnhap() {
+      if (!this.username || !this.password) {
+        this.errorMessage = "Vui lòng nhập tên đăng nhập và mật khẩu";
+        return;
+      }
+      const formData = {
+        username: this.username,
+        password: this.password,
+      };
+
+      api
+        .post("/api/customer/login", formData)
+        .then((response) => {
+          console.log(response);
+          const accessToken = response.data.accessToken;
+          document.cookie = `accessToken=${accessToken}; path=/; max-age=3600; secure;`;
+          localStorage.setItem("isAuthenticated", "true");
+          localStorage.setItem("username", response.data.data.customer);
+          this.successMessage = "Đăng nhập thành công !!";
+           router.push({ name: "Home" });
+        })
+        .catch((error) => {
+          console.error(error);
+          this.errorMessage = "Lỗi đăng nhập!";
+        });
+    },
+  },
+};
+</script>
 <template>
   <body class="h-screen max-w-full">
     <section
@@ -13,17 +53,25 @@
       <div
         class="bg-white shadow-xl rounded-2xl flex w-9/12 p-5 items-center h-screen"
       >
+
         <div class="md:w-1/2 px-8">
+          <div v-if="errorMessage" class="text-red-600 font-semibold">
+                {{ errorMessage }}
+              </div>
+              <div v-if="successMessage" class="text-green-600 font-semibold">
+                {{ successMessage }}
+              </div>
           <h2 class="font-bold text-3xl text-[#002D74]">Đăng nhập</h2>
           <p class="text-sm mt-4 text-[#002D74]">
             Nếu bạn đã có tài khoản, hãy đăng nhập.
           </p>
 
-          <form action="" class="flex flex-col gap-4">
+          <form @submit.prevent="dangnhap" class="flex flex-col gap-4">
             <input
               class="p-2 mt-8 rounded-xl border"
               type="username"
               name="username"
+              v-model="username"
               placeholder="Tên đăng nhập"
               require
             />
@@ -31,6 +79,7 @@
               <input
                 class="p-2 rounded-xl border w-full"
                 type="password"
+                v-model="password"
                 name="password"
                 id="password"
                 placeholder="Mật khẩu"

@@ -1,6 +1,7 @@
 <!-- eslint-disable prettier/prettier -->
 <!-- eslint-disable prettier/prettier -->
 <template>
+  <NavBar />
       <div class="locationspage bg-gray-100">
     <div class="img_container_1">
       <img
@@ -634,10 +635,18 @@
 
     </body>
     </div>
+    <Footer />
 </template>
 
 <script>
-export default {};
+import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
+export default {
+  components:{
+    NavBar,
+    Footer
+  }
+};
 </script>
 
 <style scoped>

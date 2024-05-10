@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <div>
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div
@@ -305,11 +306,13 @@
       </div>
     </section>
   </div>
+  <Footer />
 </template>
 
 <script>
 import api from "../services/api.service";
-
+import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
 export default {
   data() {
     return {
@@ -320,6 +323,10 @@ export default {
       },
       successMessage: "",
     };
+  },
+  components:{
+    NavBar,
+    Footer
   },
   methods: {
     async submitFeedback() {

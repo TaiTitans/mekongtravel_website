@@ -181,14 +181,14 @@
         class="rounded pt-2 pr-4 pb-2 flex flex-row gap-1 items-center justify-center shrink-0 h-12 relative ml-0"
       >
       <Button onclick="my_modal_4.showModal()"
-        class="btn relative z-10 inline-flex w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-cyan-500 border-2 border-transparent rounded-xl font-pj hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+        class="btn relative z-10 inline-flex w-full px-6 py-1 text-lg font-bold text-white transition-all duration-200 bg-cyan-500 border-2 border-transparent rounded-xl font-pj hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
         role="button">
        Đọc thêm
     </Button>
     
 <!-- You can open the modal using ID.showModal() method -->
 <dialog id="my_modal_4" class="modal overflow-auto">
-  <div class="modal-box w-11/12 max-w-5xl">
+  <div class="modal-box w-11/12 max-w-5xl no-scrollbar">
     <div class="flex border-b-2 ">
       <h3 class="font-bold text-[24px] mr-2 text-cyan-500">Về chúng tôi</h3>
       <svg class="w-6 h-6 text-red-600 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -223,218 +223,7 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
       />
   </div>
 
-  <div style="inset: 0">
-    <div class="static ml-8 mr-8 mt-20">
-      <div
-        class="text-[#80a5b3] text-left font-['Inter-SemiBold',_sans-serif] text-2xl leading-5 font-semibold relative"
-      >
-        NHỮNG ĐỊA ĐIỂM NỔI BẬT
-      </div>
-    </div>
-
-    <div class="itemlist flex flex-row gap-6 items-start justify-center mt-6 mb-20">
-
-      <div
-      class="bg-zinc-50 shadow-lg shadow-cyan-500/50 rounded p-4 flex flex-col gap-4 items-center justify-center w-[342px] h-[432px]"
-    >
-      <img
-        class="rounded-2xl shrink-0 w-[330px] h-60 relative"
-        style="object-fit: cover"
-        src="../assets/img/homepage/nuicam_test.png"
-      />
-      <div
-        class="flex flex-col gap-3.5 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-[#2d3134] text-left font-['Inter-SemiBold',_sans-serif] text-2xl leading-6 font-semibold relative self-stretch"
-        >
-          Núi Cấm
-        </div>
-        <div
-          class="text-[#2d3134] text-left font-['Inter-Regular',_sans-serif] text-lg leading-[18px] font-normal relative self-stretch"
-        >
-          Trà Vinh
-        </div>
-        <div
-          class="text-[#5b5f62] text-left font-['Inter-Regular',_sans-serif] text-base leading-4 font-normal relative self-stretch"
-        >
-          Dịch vụ vé : Không
-        </div>
-      </div>
-      <div
-        class="flex flex-row items-center justify-between self-stretch shrink-0 relative"
-      >
-        <div class="shrink-0 w-[45px] h-[25px] static">
-          <div
-            class="text-[#2d3134] text-left font-['Inter-SemiBold',_sans-serif] text-xl leading-5 font-semibold absolute left-0 top-[14.25px]"
-          >
-            5
-          </div>
-          <img
-            class="w-[20px] h-[20px] absolute left-5 top-[11.5px]"
-            style="object-fit: cover"
-            src="../assets/img/homepage/ngoisao.png"
-          />
-        </div>
-        <a href="#" title=""
-        class="left-[188px] top-0 z-10 shrink-0 w-[120px] h-12 static text-center py-3 text-[16px] text-[#80a5b3] transition-all duration-200 bg-white border-solid border-[#80a5b3] border rounded-full font-pj hover:bg-cyan-500 hover:text-white focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-        role="button">
-       Xem thêm
-    </a>
-      </div>
-    </div>
-    <div
-      class="bg-zinc-50 shadow-lg shadow-cyan-500/50 rounded p-4 flex flex-col gap-4 items-center justify-center w-[342px] h-[432px]"
-    >
-      <img
-        class="rounded-2xl shrink-0 w-[344px] h-[249px] relative"
-        style="object-fit: cover"
-        src="../assets/img/homepage/aobaom_test.png"
-      />
-      <div
-        class="flex flex-col gap-3.5 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-[#2d3134] text-left font-['Inter-SemiBold',_sans-serif] text-2xl leading-6 font-semibold relative self-stretch"
-        >
-          Ao Bà Om
-        </div>
-        <div
-          class="text-[#2d3134] text-left font-['Inter-Regular',_sans-serif] text-lg leading-4 font-normal relative self-stretch"
-        >
-          Trà Vinh
-        </div>
-        <div
-          class="text-[#5b5f62] text-left font-['Inter-Regular',_sans-serif] text-base leading-4 font-normal relative self-stretch"
-        >
-          Dịch vụ vé : Không
-        </div>
-      </div>
-      <div
-        class="flex flex-row items-center justify-between self-stretch shrink-0 relative"
-      >
-        <div class="shrink-0 w-[45px] h-[25px] static">
-          <div
-            class="text-[#2d3134] text-left font-['Inter-SemiBold',_sans-serif] text-xl leading-5 font-semibold absolute left-0 top-[14.25px]"
-          >
-            3
-          </div>
-          <img
-            class="w-[20px] h-[20px] absolute left-5 top-[11.5px]"
-            style="object-fit: cover"
-            src="../assets/img/homepage/ngoisao.png"
-          />
-        </div>
-        <a href="#" title=""
-        class="left-[188px] top-0 z-10 shrink-0 w-[120px] h-12 static text-center py-3 text-[16px] text-[#80a5b3] transition-all duration-200 bg-white border-solid border-[#80a5b3] border rounded-full font-pj hover:bg-cyan-500 hover:text-white focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-        role="button">
-       Xem thêm
-    </a>
-      </div>
-    </div>
-    <div
-      class="bg-zinc-50 shadow-lg shadow-cyan-500/50 rounded p-4 flex flex-col gap-4 items-center justify-center w-[342px] h-[432px]"
-    >
-      <img
-        class="rounded-2xl shrink-0 w-[344.62px] h-[253px] relative"
-        style="object-fit: cover"
-        src="../assets/img/homepage/chuadoi_test.png"
-      />
-      <div
-        class="flex flex-col gap-3.5 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-[#2d3134] text-left font-['Inter-SemiBold',_sans-serif] text-2xl leading-6 font-semibold relative self-stretch"
-        >
-          Chùa Dơi
-        </div>
-        <div
-          class="text-[#2d3134] text-left font-['Inter-Regular',_sans-serif] text-lg leading-[18px] font-normal relative self-stretch"
-        >
-          Sóc Trăng
-        </div>
-        <div
-          class="text-[#5b5f62] text-left font-['Inter-Regular',_sans-serif] text-base leading-4 font-normal relative self-stretch"
-        >
-          Dịch vụ vé : Không
-        </div>
-      </div>
-      <div
-        class="flex flex-row items-center justify-between self-stretch shrink-0 relative"
-      >
-        <div class="shrink-0 w-[45px] h-[25px] static">
-          <div
-            class="text-[#2d3134] text-left font-['Inter-SemiBold',_sans-serif] text-xl leading-5 font-semibold absolute left-0 top-[14.25px]"
-          >
-            4
-          </div>
-          <img
-            class="w-[20px] h-[20px] absolute left-5 top-[11.5px]"
-            style="object-fit: cover"
-            src="../assets/img/homepage/ngoisao.png"
-          />
-        </div>
-        <a href="#" title=""
-        class="left-[188px] top-0 z-10 shrink-0 w-[120px] h-12 static text-center py-3 text-[16px] text-[#80a5b3] transition-all duration-200 bg-white border-solid border-[#80a5b3] border rounded-full font-pj hover:bg-cyan-500 hover:text-white focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-        role="button">
-       Xem thêm
-    </a>
-      </div>
-    </div>
-    <div
-      class="bg-zinc-50 shadow-lg shadow-cyan-500/50 rounded p-4 flex flex-col gap-4 items-center justify-center w-[342px] h-[432px]"
-    >
-      <img
-        class="rounded-2xl shrink-0 w-[330px] h-[253.81px] relative"
-        style="object-fit: cover"
-        src="../assets/img/homepage/benninhkieu_test.png"
-      />
-      <div
-        class="flex flex-col gap-3.5 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-[#2d3134] text-left font-['Inter-SemiBold',_sans-serif] text-2xl leading-6 font-semibold relative self-stretch"
-        >
-          Bến Ninh Kiều
-        </div>
-        <div
-          class="text-[#2d3134] text-left font-['Inter-Regular',_sans-serif] text-lg leading-[18px] font-normal relative self-stretch"
-        >
-          Cần Thơ
-        </div>
-        <div
-          class="text-[#5b5f62] text-left font-['Inter-Regular',_sans-serif] text-base leading-4 font-normal relative self-stretch"
-        >
-          Dịch vụ vé : Không
-        </div>
-      </div>
-      <div
-        class="flex flex-row items-center justify-between self-stretch shrink-0 relative"
-      >
-        <div class="shrink-0 w-[45px] h-[25px] static">
-          <div
-            class="text-[#2d3134] text-left font-['Inter-SemiBold',_sans-serif] text-xl leading-5 font-semibold absolute left-0 top-[14.25px]"
-          >
-            4
-          </div>
-          <img
-            class="w-[20px] h-[20px] absolute left-5 top-[11.5px]"
-            style="object-fit: cover"
-            src="../assets/img/homepage/ngoisao.png"
-          />
-        </div>
-        <a href="#" title=""
-        class="left-[188px] top-0 z-10 shrink-0 w-[120px] h-12 static text-center py-3 text-[16px] text-[#80a5b3] transition-all duration-200 bg-white border-solid border-[#80a5b3] border rounded-full font-pj hover:bg-cyan-500 hover:text-white focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-        role="button">
-       Xem thêm
-    </a>
-      </div>
-    </div>
-
-
-    </div>
-
-  </div>
+  <NewLocations></NewLocations>
 
   <div class="text_container mt-4 mb-6 text-center">
         <p class="mt-2 text-[#2d3134] text-[30px] font-semibold">
@@ -450,7 +239,7 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
 
       
       <div class="flex flex-row gap-6 items-start justify-center shrink-0 relative">
-    <div
+    <router-link to="/location-product"
       class="rounded-3xl border-solid border-[#80a5b3] border pt-2.5 pr-5 pb-2.5 pl-5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative clickable-item shadow-md"
     >
       <div
@@ -458,8 +247,8 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
       >
         All
       </div>
-    </div>
-    <div
+    </router-link>
+    <router-link to="/location-product"
       class="rounded-3xl border-solid border-[#80a5b3] border pt-2.5 pr-5 pb-2.5 pl-5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative clickable-item shadow-md"
     >
       <div
@@ -467,8 +256,8 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
       >
         An Giang
       </div>
-    </div>
-    <div
+    </router-link>
+    <router-link to="/location-product"
       class="rounded-3xl border-solid border-[#80a5b3] border pt-2.5 pr-5 pb-2.5 pl-5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative clickable-item shadow-md"
     >
       <div
@@ -476,8 +265,8 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
       >
         Trà Vinh
       </div>
-    </div>
-    <div
+    </router-link>
+    <router-link to="/location-product"
       class="rounded-3xl border-solid border-[#80a5b3] border pt-2.5 pr-5 pb-2.5 pl-5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative clickable-item shadow-md"
     >
       <div
@@ -485,8 +274,8 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
       >
         Vĩnh Long
       </div>
-    </div>
-    <div
+    </router-link>
+    <router-link to="/location-product"
       class="rounded-3xl border-solid border-[#80a5b3] border pt-2.5 pr-5 pb-2.5 pl-5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative clickable-item shadow-md"
     >
       <div
@@ -494,7 +283,7 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
       >
         Sóc Trăng
       </div>
-    </div>
+    </router-link>
     <div
       class="bg-[#80a5b3] rounded-3xl border-solid border-[#80a5b3] border pt-2.5 pr-5 pb-2.5 pl-5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative shadow-md"
     >
@@ -504,7 +293,7 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
         Cần Thơ
       </div>
     </div>
-    <div
+    <router-link to="/location-product"
       class="rounded-3xl border-solid border-[#80a5b3] border pt-2.5 pr-5 pb-2.5 pl-5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative clickable-item shadow-md"
     >
       <div
@@ -512,7 +301,7 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
       >
         Đồng Tháp
       </div>
-    </div>
+    </router-link>
   </div>
 
 
@@ -521,7 +310,7 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
     <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
             <!-- image - start -->
-            <a href="#"
+            <router-link to="/location-product"
                 class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
                 <img src="../assets/img/homepage/benninhkieu_test.png" loading="lazy" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
@@ -530,11 +319,11 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
                 </div>
 
                 <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Bến Ninh Kiều</span>
-            </a>
+            </router-link>
             <!-- image - end -->
 
             <!-- image - start -->
-            <a href="#"
+            <router-link to="/location-product"
                 class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
                 <img src="../assets/img/homepage/chonoicairang.jpg" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
@@ -543,11 +332,11 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
                 </div>
 
                 <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Chợ nổi Cái Răng</span>
-            </a>
+            </router-link>
             <!-- image - end -->
 
             <!-- image - start -->
-            <a href="#"
+            <router-link to="/location-product"
                 class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
                 <img src="../assets/img/homepage/langsinhthaiongde.jpg" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
@@ -556,11 +345,11 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
                 </div>
 
                 <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Du lịch sinh thái Ông Đề</span>
-            </a>
+            </router-link>
             <!-- image - end -->
 
             <!-- image - start -->
-            <a href="#"
+            <router-link to="/location-product"
                 class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
                 <img src="../assets/img/homepage/thienvientruclam.jpg" loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
@@ -569,7 +358,7 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
                 </div>
 
                 <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Thiền Viện Trúc Lâm</span>
-            </a>
+            </router-link>
             <!-- image - end -->
         </div>
     </div>
@@ -667,23 +456,113 @@ MekongTravel App là người bạn đồng hành lý tưởng cho những chuy�
     </ul>
   </div>
 </section>
+<!-- Chatbot -->
+<div class="flex z-50 fixed bottom-0 right-0" @click="toggleChatbotPopup">
+  <img src="../assets/chatbot_logo.jpg" class="z-51 rounded-full w-[60px] h-[60px] mb-6 mr-6 animate-bounce hover:animate-pulse" alt="">
+  <span class="animate-ping absolute inline-flex h-10 w-10 rounded-full bg-sky-400 opacity-75 ml-[10px]"></span>
+</div>
+<div v-if="isChatbotOpen" class="fixed bottom-24 right-6 bg-white p-4 rounded-lg shadow-lg mb-4 w-96">
+  <!-- Chatbot content -->
+  <h1 class="text-lg font-semibold mb-2">MekongTravel Chatbot, Xin Chào !</h1>
+  <h3>Hân hạnh được giúp đỡ bạn.</h3>
+  <div class="h-[1px] w-full bg-gray-200"></div>
+  <div class="h-64 overflow-y-auto mt-4">
+    <div v-for="(message, index) in chatHistory" :key="index" class="mb-2">
+      <span class="text-xs text-gray-500">{{ message.timestamp }}</span>
+  <div v-if="message.type === 'user'" class="bg-blue-200 rounded-lg p-2 ml-auto flex">
+    <img src="../assets/user_logo.png" class="rounded-full w-[30px] h-[30px] mr-2" alt="User Logo">
+    <p class="text-sm">{{ message.content }}</p>
+  </div>
+  <div v-else class="bg-gray-200 rounded-lg p-2 flex">
+      <img src="../assets/chatbot_logo.png" class="rounded-full w-[30px] h-[30px] mr-2" alt="Bot Logo">
+    <p class="text-sm">{{ message.content }}</p>
+  </div>
+</div>
 
+  </div>
 
+  <!-- Chat input and send button -->
+  <div class="mt-4 flex">
+    <input
+      type="text"
+      class="flex-grow px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
+      placeholder="Nhập tin nhắn..."
+      v-model="chatMessage"
+      @keyup.enter="sendChatMessage"
+    />
+    <button
+      @click="sendChatMessage"
+      class="ml-2 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg focus:outline-none"
+    >
+      Gửi
+    </button>
+  </div>
 
-
+  <!-- Close button -->
+  <button
+    @click="endChat"
+    class="mt-4 bg-white hover:bg-blue-600 border text-gray-400 py-2 px-4 rounded-lg focus:outline-none"
+  >
+    Kết thúc
+  </button>
+</div>
     </body>
   </div>
   <Footer></Footer>
 </template>              
 <script>
+import NewLocations from "../components/NewLocations.vue"
 import NavBar from "../components/NavBar.vue";
 import Footer from "../components/Footer.vue";
+import api from "../services/api.service"
+import axios from 'axios';
 export default {
 name: "HomePage",
+data(){
+  return{
+    isChatbotOpen: false,
+    chatMessage: '',
+    chatHistory: [],
+  }
+},
+methods:{
+  toggleChatbotPopup() {
+      this.isChatbotOpen = !this.isChatbotOpen;
+    },
+    async sendChatMessage() {
+  try {
+    const response = await axios.post('http://localhost:5000/create_chat', {
+      message: this.chatMessage,
+    });
+
+    const currentTime = new Date();
+    const timestamp = currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    // Thêm tin nhắn của người dùng vào lịch sử chat với timestamp và loại tin nhắn là 'user'
+    this.chatHistory.push({ sender: 'User', content: this.chatMessage, type: 'user', timestamp: timestamp });
+
+    // Thêm câu trả lời của bot vào lịch sử chat với timestamp và loại tin nhắn là 'bot'
+    this.chatHistory.push({ sender: 'Bot', content: response.data.response, type: 'bot', timestamp: timestamp });
+
+    this.chatMessage = ''; // Xóa nội dung tin nhắn sau khi gửi thành công
+  } catch (error) {
+    console.error('Error sending chat message:', error);
+    // Xử lý các lỗi
+  }
+},
+
+
+    endChat() {
+      this.chatHistory = []; // Xóa lịch sử chat khi kết thúc
+      this.isChatbotOpen = false; // Đóng chatbot popup
+    },
+},
 components:{
   NavBar,
-  Footer
-}
+  Footer,
+  NewLocations
+},
+
 }
 
 </script>
@@ -746,4 +625,5 @@ components:{
 .clickable-item:hover {
   background-color: #80a5b3;
 }
+
 </style>

@@ -1,8 +1,9 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
+  <NavBar />
   <div>
     <div class="bg-gray-900 py-20">
-    <div class="container mx-auto px-6 md:px-12">
+    <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 lg:w-2/3">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl text-white font-bold mb-6">
@@ -47,7 +48,7 @@
             src="../assets/img/historypage/gomsu2.png"
           />
           <img
-            class="rounded-tl-[140px] rounded-bl-[140px] w-[340px] h-[473px] absolute left-[1220px] top-0"
+            class="rounded-tl-[140px] rounded-bl-[140px] w-[340px] h-[473px] absolute left-[1050px] top-0"
             style="object-fit: cover"
             src="../assets/img/historypage/gomsu3.png"
           />
@@ -58,7 +59,7 @@
       >
         <div class="shrink-0 w-[535px] h-[610px] static">
           <div
-            class="text-[#554f3d] text-left font-['Cormorant-Regular',_sans-serif] text-xl font-normal absolute left-[260px] top-[290px] w-[416px]"
+            class="text-[#554f3d] text-left font-['Cormorant-Regular',_sans-serif] text-xl font-normal absolute left-[175px] top-[290px] w-[416px]"
           >
             Khoảng 6000 - 7000 năm trước, gốm sứ bắt đầu hình thành ở nước ta.
             Gốm sứ đã xuất hiện ở nhiều vùng miền trên cả nước. Trải qua bao
@@ -204,10 +205,18 @@ Cuộc sống ở miền Tây mang đậm bản sắc văn hóa dân gian, với
 
 
   </div>
+  <Footer />
 </template>
 
 <script>
-export default {};
+import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
+export default {
+  components:{
+    NavBar,
+    Footer
+  }
+};
 </script>
 
 <style></style>

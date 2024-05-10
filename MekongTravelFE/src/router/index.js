@@ -19,9 +19,13 @@ const routes = [
     component: Register,
   },
   {
-    path:'',
+    path:'/',
     name: 'Home',
     children:[
+      {
+        path:"/home",
+        component: HomePage,
+      },
       {
         path: "/locations",
         component: LocationsPage,
@@ -56,12 +60,12 @@ router.beforeEach((to, from, next) => {
   const isLoginPage = to.path === "/login";
   const isRegisterPage = to.path === "/register";
 
-  if (!isAuthenticated && !isLoginPage && !isRegisterPage) {
+  if (to.path === '/') {
+    next('/home');
+  } else if (!isAuthenticated && !isLoginPage && !isRegisterPage) {
     localStorage.setItem('redirectPath', to.path);
-    console.log(isAuthenticated);
     next('/login');
   } else {
-    console.log(isAuthenticated);
     next();
   }
 });

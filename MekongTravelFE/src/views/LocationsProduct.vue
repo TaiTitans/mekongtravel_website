@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
     <div>
   
       <div class="flex mb-4 justify-center text-[26px] font-bold text-sky-700">
@@ -55,30 +56,22 @@ Vậy du lịch miền Tây nên đi tỉnh nào? Hãy cùng tìm hiểu trong p
       <!-- Thêm ô input và nút tìm kiếm -->
       <div class="flex justify-end my-4">
         <input type="text" v-model="searchKeyword" placeholder="Nhập từ khóa tìm kiếm" class="px-4 py-2 border border-gray-300 rounded-md mr-2">
-        <button @click="searchAmThuc" class="px-4 py-2 bg-[#36cef9] text-white rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
+        <button @click="searchDiaDiem" class="px-4 py-2 bg-[#36cef9] text-white rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
           Tìm kiếm
         </button>
       </div>
   
-      <!-- Danh sách ẩm thực được tìm kiếm -->
-      <div v-if="searchResults.length > 0">
-        <h3 class="text-lg font-semibold mb-4">Kết quả tìm kiếm:</h3>
-        <div v-for="diaDiem in searchResults" :key="diaDiem._id" class="mb-4">
-          <!-- Hiển thị thông tin ẩm thực -->
-          <div class="border border-gray-200 p-4 rounded-lg flex">
-            <img :src="diaDiem.hinhAnh" alt="Ảnh món ăn" class="w-32 h-32 object-cover rounded-lg mr-4">
-            <div>
-              <h4 class="text-lg font-semibold">{{ diaDiem.tenDiaDiem }}</h4>
-              <p class="text-gray-600">{{ diaDiem.moTa }}</p>
-              <p class="mt-2 text-gray-500 font-semibold">Số sao: </p>
-              <div class="ml-2 text-yellow-300">{{ diaDiem.soSao }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div v-else>
-        <p v-if="searchKeyword !== ''">Không tìm thấy kết quả phù hợp.</p>
-      </div>
+      <!-- Danh sáchđược tìm kiếm -->
+      <!-- <div v-if="filteredDiaDiemList.length > 0">
+  <ul>
+    <li v-for="diaDiem in filteredDiaDiemList" :key="diaDiem._id">
+      {{ diaDiem.tenDiaDiem }}
+    </li>
+  </ul>
+</div>
+<div v-else>
+  <p>Không tìm thấy kết quả phù hợp.</p>
+</div> -->
     </div>
   
   
@@ -96,10 +89,13 @@ Vậy du lịch miền Tây nên đi tỉnh nào? Hãy cùng tìm hiểu trong p
               <svg class="w-4 h-4 text-yellow-500 dark:text-white mt-[10px] ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
   <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
 </svg>
-
+<a :href="'https://www.google.com/maps/search/?api=1&query=' + diaDiem.tenDiaDiem" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-gray-200 text-black rounded-md hover:bg-white focus:outline-none focus:shadow-outline-blue mt-10">
+  Địa chỉ trên Google Maps
+</a>
                 </div>
 
               </div>
+              
             </div>
           </div>
           <div v-if="totalPages > 1" class="flex justify-center mt-4">
@@ -157,24 +153,32 @@ Vậy du lịch miền Tây nên đi tỉnh nào? Hãy cùng tìm hiểu trong p
   
   </div>
     </div>
-    
+    <Footer />
   </template>
   
   <script>
   import api from '../services/api.service';
-  
+  import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
   export default {
+    components:{
+      NavBar,
+      Footer
+    },
     data() {
       return {
         tinhThanhList: [], // Danh sách tỉnh thành
         selectedTinhThanh: null, // Tỉnh thành được chọn
-        diaDiemList: [], // Danh sách ẩm thực của tỉnh thành được chọn
         page: 1, // Trang hiện tại
         perPage: 4,
-        searchKeyword: '', // Từ khóa tìm kiếm nhập từ người dùng
-        searchResults: []  // Số lượng ẩm thực hiển thị trên mỗi trang
+        diaDiemList: [], // Danh sách địa điểm
+    searchKeyword: '', // Từ khóa tìm kiếm
+    filteredDiaDiemList: [] // Danh sách địa điểm đã được lọc
       };
     },
+    async created() {
+  await this.getAllDiaDiem();
+},
     computed: {
       totalPages() {
         return Math.ceil(this.diaDiemList.length / this.perPage);
@@ -186,6 +190,7 @@ Vậy du lịch miền Tây nên đi tỉnh nào? Hãy cùng tìm hiểu trong p
     },
     mounted() {
       this.fetchTinhThanhList();
+      this.getAllDiaDiem()
     },
     methods: {
       async fetchTinhThanhList() {
@@ -197,32 +202,43 @@ Vậy du lịch miền Tây nên đi tỉnh nào? Hãy cùng tìm hiểu trong p
         }
       },
       async getDiaDiemByTinhThanh(tinhThanhID) {
-        try {
-          const response = await api.get(`/api/diadiem/getByTinhThanh/${tinhThanhID}`);
-          this.selectedTinhThanh = this.tinhThanhList.find(item => item._id === tinhThanhID);
-          this.diaDiemList = response.data.data;
-          this.page = 1; // Reset lại trang khi chuyển tỉnh thành
-        } catch (error) {
-          console.error('Error fetching địa điểm by tỉnh thành:', error);
-        }
-      },
+  try {
+    const response = await api.get(`/api/diadiem/getByTinhThanh/${tinhThanhID}`);
+    this.selectedTinhThanh = this.tinhThanhList.find(item => item._id === tinhThanhID);
+    this.diaDiemList = response.data.data;
+    this.searchKeyword = ''; // Reset lại ô tìm kiếm
+    this.page = 1; // Reset lại trang khi chuyển tỉnh thành
+  } catch (error) {
+    console.error('Error fetching địa điểm by tỉnh thành:', error);
+  }
+},
       changePage(newPage) {
         this.page = newPage;
       },
-  async searchDiaDiem() {
-    if (!this.searchKeyword) {
-      console.error('Từ khóa tìm kiếm không hợp lệ.');
-      return;
-    }
-  
-    try {
-      const response = await api.post('/api/diadiem/search', { searchKeyword: this.searchKeyword });
+      async searchDiaDiem() {
+  try {
+    if (this.searchKeyword) {
+      const response = await api.post('/api/diadiem/search', {
+        searchKeyword: this.searchKeyword
+      });
       this.searchResults = response.data.data;
-    } catch (error) {
-      console.error('Lỗi khi tìm kiếm ẩm thực:', error);
-      // Có thể thêm thông báo cho người dùng ở đây nếu cần
+    } else {
+      this.searchResults = [];
+      console.error('Chưa có từ khóa tìm kiếm.');
     }
+  } catch (error) {
+    this.searchResults = [];
+    console.error('Lỗi khi tìm kiếm địa điểm:', error);
   }
+},
+ async getAllDiaDiem() {
+    try {
+      const response = await api.get('/api/diadiem/getAll');
+      this.diaDiemList = response.data.data;
+    } catch (error) {
+      console.error('Lỗi khi lấy danh sách địa điểm:', error);
+    }
+  },
   
     }
   };
